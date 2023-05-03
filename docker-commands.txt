@@ -1,0 +1,24 @@
+# PostgreSQL
+
+# Fetch image
+docker pull postgres:12-alpine
+
+# Run a container
+docker run --name postgres12 -e POSTGRES_USER=smit -e POSTGRES_PASSWORD=smit -p 5432:5432 -d postgres:12-alpine
+
+# Check live containers
+docker ps
+
+# user's shell of postgres db
+docker exec -it postgres12 psql -U smit
+\q to exit
+
+# Logs of container
+docker logs postgres12
+
+# Stop docker container
+docker stop postgres12
+
+# Start stopped docker container
+docker start postgres12
+
